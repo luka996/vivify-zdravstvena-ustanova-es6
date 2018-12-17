@@ -6,16 +6,17 @@ module.exports = class Doktor extends Osoba {
         super(ime, prezime);
         this.specijalnost = specijalnost;
         this.listaPacijenata = [];
+        this.listaPregleda = [];
         console.log(`Kreiran doktor ${this.ime} ${this.prezime}`);
     }
 
     dodajPacijenta(pacijent) {
-        if(pacijent instanceof Pacijent) {
-            this.listaPacijenata.push(pacijent);
-            console.log(`Dodat pacijent na listu`);
-        } else {
-            console.log("Prosledite objekat klase Pacijent kao argument");
-        }
+        this.listaPacijenata.push(pacijent);
+        console.log(`Dodat pacijent na listu`);
+    }
+
+    dodajPregled(pacijent, pregled) {
+        this.listaPregleda.push({'Pacijent': pacijent, 'Pregled': pregled});
     }
 
     ukloniPacijenta(pacijent) {

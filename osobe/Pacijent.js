@@ -11,21 +11,16 @@ module.exports = class Pacijent extends Osoba {
     }
 
     izaberiLekara(lekar) {
-        if(lekar instanceof Doktor) {
-            if(this.izabraniLekar != null) {
-                this.izabraniLekar.ukloniPacijenta(this);
-                this.izabraniLekar = lekar;
-                lekar.dodajPacijenta(this);
-                console.log(`Promenjen izabrani lekar ${this.izabraniLekar.ime}`);
-            }
-            else {
-                this.izabraniLekar = lekar;
-                lekar.dodajPacijenta(this);
-                console.log(`Promenjen izabrani lekar ${this.izabraniLekar.ime}`);
-            }
-        } else {
-            console.log("Prosledite objekat klase Doktor kao argument");
+        if(this.izabraniLekar != null) {
+            this.izabraniLekar.ukloniPacijenta(this);
+            this.izabraniLekar = lekar;
+            lekar.dodajPacijenta(this);
+            console.log(`Promenjen izabrani lekar ${this.izabraniLekar.ime}`);
         }
-
+        else {
+            this.izabraniLekar = lekar;
+            lekar.dodajPacijenta(this);
+            console.log(`Promenjen izabrani lekar ${this.izabraniLekar.ime}`);
+        }
     }   
 }
