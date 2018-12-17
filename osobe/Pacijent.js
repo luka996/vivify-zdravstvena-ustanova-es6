@@ -2,7 +2,7 @@ const Osoba = require('./Osoba');
 const Doktor = require('./Doktor');
 const Logger = require('../logger/Loger');
 
-let log = new Logger();
+let log = Logger;
 
 module.exports = class Pacijent extends Osoba {
     constructor(ime, prezime, jmbg, brojKartona) {

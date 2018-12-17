@@ -2,12 +2,8 @@
 const fs = require('fs');
 let instance = null;
 
-module.exports = class Logger {
+class Logger {
     constructor() {
-        if(!instance) {
-            instance = this;
-        }
-        return instance;
     }
 
     genDateTimeStamp() {
@@ -29,3 +25,8 @@ module.exports = class Logger {
     }
 
 }
+
+let logger = new Logger();
+Object.freeze(logger);
+
+module.exports = logger;
