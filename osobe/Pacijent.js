@@ -14,13 +14,12 @@ module.exports = class Pacijent extends Osoba {
     }
 
     izaberiLekara(lekar) {
-        if(this.izabraniLekar != null) {
+        if(this.izabraniLekar !== null) {
             this.izabraniLekar.ukloniPacijenta(this);
             this.izabraniLekar = lekar;
             lekar.dodajPacijenta(this);
             log.logujAkciju(`Pacijent ${this.ime} ${this.prezime} je promenio izabranog lekara na ${lekar.ime} ${lekar.prezime}`, false);
-        }
-        else {
+        } else {
             this.izabraniLekar = lekar;
             lekar.dodajPacijenta(this);
             log.logujAkciju(`Pacijent ${this.ime} ${this.prezime} je promenio izabranog lekara na ${lekar.ime} ${lekar.prezime}`, false);

@@ -1,0 +1,9 @@
+
+ [17/11/2018][14:57:37] Kreiran pacijent Dragan Draganovic
+ [17/11/2018][14:57:37] Kreiran doktor Milan Milanovic
+ [17/11/2018][14:57:37] Milan Milanovic je dodao pacijenta Dragan Draganovic na listu pacijenata
+ [17/11/2018][14:57:37] Pacijent Dragan Draganovic je promenio izabranog lekara na Milan Milanovic
+ [17/11/2018][14:57:37] Doktor Milan je zakazao laboratorijski pregled krvnog pritiska za pacijenta Dragan za 01/01/2021
+ [17/11/2018][14:57:37] Doktor Milan je zakazao laboratorijski pregled secera u krvi za pacijenta Dragan za 09/09/2029
+ [17/11/2018][14:57:37] Za pacijenta Dragan je obavljen laboratorijski pregled pritiska sa rezultatom 142.5
+ [17/11/2018][14:57:37] Za pacijenta Dragan je obavljen laboratorijski pregled secera u krvi sa rezultatom 6

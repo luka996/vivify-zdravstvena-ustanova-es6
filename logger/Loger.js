@@ -1,6 +1,9 @@
 
 const fs = require('fs');
+const { join } = require('path');
 let instance = null;
+const path = join(__dirname, '..');
+
 
 class Logger {
     constructor() {
@@ -18,7 +21,8 @@ class Logger {
 
     logujAkciju(akcija, isConsole) {
         if(isConsole == false) {
-            fs.appendFileSync("../log.txt", `\n ${this.genDateTimeStamp()} ${akcija}`);
+            console.log(path);
+            fs.appendFileSync(path + '/log.txt', `\n ${this.genDateTimeStamp()} ${akcija}`);
         } else {
             console.log(`\n ${this.genDateTimeStamp()} ${akcija}`);
         }

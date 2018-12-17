@@ -1,11 +1,11 @@
 const Doktor = require("../osobe/Doktor");
 const Pacijent = require("../osobe/Pacijent");
-const Logger = require("../logger/Loger");
 
+let pacijentDragan = new Pacijent("Dragan", "Draganovic");
+let doktorMilan = new Doktor("Milan","Milanovic", "Otorinolaringolog");
 
-let testDoktor = new Doktor("Test", "Testeric", "Test");
-let testDoktor2 = new Doktor("Test2", "Testerkovic2", "Test");
-let testPacijent = new Pacijent("Test", "Testeric", "Test", "Test");
-testPacijent.izaberiLekara(testDoktor);
-testPacijent.izaberiLekara(testDoktor2);
-
+pacijentDragan.izaberiLekara(doktorMilan);
+doktorMilan.zakaziPregled(pacijentDragan, 'pritisak', '01/01/2021');
+doktorMilan.zakaziPregled(pacijentDragan, 'secer', '09/09/2029');
+doktorMilan.obaviPregled(0);
+doktorMilan.obaviPregled(1);
