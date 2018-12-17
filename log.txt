@@ -1,11 +1,9 @@
-undefined Test log[17/11/2018][11:40] Test log
- [17/11/2018][11:01] Test log
- [17/11/2018][11:00] Test log
- [17/11/2018][11:17] Test log
- [17/11/2018][11:22] Test log
- [17/11/2018][11:24] Test log
- [17/11/2018][11:28] Test log
- [17/11/2018][11:38:40] Test log
- [17/11/2018][11:41:08] Test log
- [17/11/2018][11:41:45] Test log
- [17/11/2018][11:42:02] Test log
+
+ [17/11/2018][11:57:30] Kreiran doktor Test Testeric
+ [17/11/2018][11:57:30] Kreiran doktor Test2 Testerkovic2
+ [17/11/2018][11:57:30] Kreiran pacijent Test Testeric
+ [17/11/2018][11:57:30] Test Testeric je dodao pacijenta Test Testeric na listu pacijenata
+ [17/11/2018][11:57:30] Pacijent Test Testeric je promenio izabranog lekara na Test Testeric
+ [17/11/2018][11:57:30] Test Testeric je uklonio pacijenta Test Testeric sa liste pacijenata
+ [17/11/2018][11:57:30] Test2 Testerkovic2 je dodao pacijenta Test Testeric na listu pacijenata
+ [17/11/2018][11:57:30] Pacijent Test Testeric je promenio izabranog lekara na Test2 Testerkovic2

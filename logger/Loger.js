@@ -7,7 +7,6 @@ module.exports = class Logger {
         if(!instance) {
             instance = this;
         }
-
         return instance;
     }
 
@@ -21,7 +20,7 @@ module.exports = class Logger {
         return `[${datum}][${vreme}]`;
     }
 
-    logujUFajl(akcija, isConsole) {
+    logujAkciju(akcija, isConsole) {
         if(isConsole == false) {
             fs.appendFileSync("../log.txt", `\n ${this.genDateTimeStamp()} ${akcija}`);
         } else {

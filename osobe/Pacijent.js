@@ -1,5 +1,8 @@
 const Osoba = require('./Osoba');
 const Doktor = require('./Doktor');
+const Logger = require('../logger/Loger');
+
+let log = new Logger();
 
 module.exports = class Pacijent extends Osoba {
     constructor(ime, prezime, jmbg, brojKartona) {
@@ -7,7 +10,7 @@ module.exports = class Pacijent extends Osoba {
         this.jmbg = jmbg;
         this.brojKartona = brojKartona;
         this.izabraniLekar = null;
-        console.log(`Kreiran novi pacijent ${this.ime} ${this.prezime}`);
+        log.logujAkciju(`Kreiran pacijent ${this.ime} ${this.prezime}`, false);
     }
 
     izaberiLekara(lekar) {
@@ -15,12 +18,12 @@ module.exports = class Pacijent extends Osoba {
             this.izabraniLekar.ukloniPacijenta(this);
             this.izabraniLekar = lekar;
             lekar.dodajPacijenta(this);
-            console.log(`Promenjen izabrani lekar ${this.izabraniLekar.ime}`);
+            log.logujAkciju(`Pacijent ${this.ime} ${this.prezime} je promenio izabranog lekara na ${lekar.ime} ${lekar.prezime}`, false);
         }
         else {
             this.izabraniLekar = lekar;
             lekar.dodajPacijenta(this);
-            console.log(`Promenjen izabrani lekar ${this.izabraniLekar.ime}`);
+            log.logujAkciju(`Pacijent ${this.ime} ${this.prezime} je promenio izabranog lekara na ${lekar.ime} ${lekar.prezime}`, false);
         }
     }   
 }
